@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name" translatable="false">Next Player</string>
+    <string name="app_name" translatable="false">MithPlayer</string>
     <string name="about_description">Version, support, credits</string>
     <string name="about_name">About</string>
     <string name="appearance_description">Adjust the app to your liking</string>
@@ -55,7 +55,7 @@
     <string name="size">Size</string>
     <string name="sort">Sort</string>
     <string name="title">Title</string>
-    <string name="title_activity_player">Next Player Activity</string>
+    <string name="title_activity_player">MithPlayer Activity</string>
     <string name="unknown_error">An unknown error has occurred</string>
     <string name="playback">Playback</string>
     <string name="interface_name">Interface</string>

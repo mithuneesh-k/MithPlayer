@@ -10,7 +10,16 @@ plugins {
     alias(libs.plugins.kotlinJvm) apply false
     alias(libs.plugins.ksp) apply false
     alias(libs.plugins.ktlint) apply false
+    id("java")
 }
+
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(17))
+    }
+}
+
+
 
 subprojects {
     apply(plugin = rootProject.libs.plugins.ktlint.get().pluginId)
@@ -21,6 +30,14 @@ subprojects {
         outputColorName.set("RED")
         ignoreFailures.set(false)
     }
+
+    tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
+        compilerOptions {
+            jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17)
+        }
+    }
+
+
 
     configure<com.mikepenz.aboutlibraries.plugin.AboutLibrariesExtension> {
         export {
